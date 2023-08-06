@@ -17,9 +17,12 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Examples',
+        path: '/comenzar/',
+        idebarDepth: 1,    // optional, defaults to 1
+        collapsible: true,
+        collapsed: false, 
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Uso del Complemento de Vite', link: '/comenzar/using-vites-plugin' },          
         ]
       }
     ],
