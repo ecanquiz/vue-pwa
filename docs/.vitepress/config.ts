@@ -16,13 +16,15 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
-        path: '/comenzar/',
+        text: 'PWA para Vite',
+        path: '/pwa-for-vite/',
         idebarDepth: 1,    // optional, defaults to 1
         collapsible: true,
         collapsed: false, 
         items: [
-          { text: 'Uso del Complemento de Vite', link: '/comenzar/using-vites-plugin' },          
+          { text: 'Introducción', link: '/pwa-for-vite/intro' },
+          { text: 'Crear Sitio Web', link: '/pwa-for-vite/create-website' },
+          { text: 'Uso del Complemento', link: '/pwa-for-vite/plugin-usage' }                    
         ]
       }
     ],
