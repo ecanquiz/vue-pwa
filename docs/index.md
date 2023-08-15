@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Comenzar
-      link: /markdown-examples
+      link: /pwa-for-vite/intro
     - theme: alt
       text: ecanquiz
       link: https://ecanquiz.github.io/
