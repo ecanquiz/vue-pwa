@@ -275,4 +275,4 @@ export default router
 
 ## Listo
 
-![using-vites-plugin](./img/using-vites-plugin-00.jpg)
+![create-website](./img/create-website-00.jpg)
