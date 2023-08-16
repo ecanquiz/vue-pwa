@@ -1,14 +1,16 @@
 # Uso del Complemento
 
-## Para instalarlo, solo necesita agregarlo a sus dependencias de tiempo de desarrollo:
+## Instalación
+
+Para instalarlo, solo necesita agregarlo a sus dependencias de tiempo de desarrollo:
 
 ```sh
-npm i vite-plugin-pwa --save-dev
+npm i -D vite-plugin-pwa
 ```
 
 Una vez instalado, puede agregarlo a su archivo `vite.config.ts`:
 
-```ts
+```ts{2,8}
 ...
 import { VitePWA } from "vite-plugin-pwa";
 
@@ -24,89 +26,77 @@ export default defineConfig({
 
 Con esto instalado, verá que sus compilaciones generarán algunos archivos adicionales:
 
-```sh
-vite v4.4.8 building for production...
-✓ 83 modules transformed.
-dist/registerSW.js                0.16 kB
-dist/manifest.webmanifest         0.17 kB
-dist/index.html                   0.61 kB │ gzip:  0.34 kB
-dist/assets/logo-4ca08a15.svg     2.66 kB │ gzip:  1.24 kB
-dist/assets/index-6ac42a59.css    8.15 kB │ gzip:  2.30 kB
-dist/assets/Edit-acc6f70c.js      1.68 kB │ gzip:  0.90 kB
-dist/assets/index-14d96737.js   109.31 kB │ gzip: 43.23 kB
+```sh{3,4,14,15}
+vite v4.4.9 building for production...
+✓ 74 modules transformed.
+dist/registerSW.js                0.13 kB
+dist/manifest.webmanifest         0.14 kB
+dist/assets/logo-277e0e97.svg     0.28 kB │ gzip:  0.20 kB
+dist/index.html                   0.54 kB │ gzip:  0.33 kB
+dist/assets/index-0ceecadb.css    6.26 kB │ gzip:  1.90 kB
+dist/assets/index-6b8b81cc.js   104.60 kB │ gzip: 41.35 kB
 
 PWA v0.16.4
 mode      generateSW
-precache  6 entries (117.10 KiB)
+precache  5 entries (108.92 KiB)
 files generated
   dist/sw.js
   dist/workbox-27b29e6f.js
-✓ built in 5.57s 
+✓ built in 5.41s
 ```
 
 
 El archivo generado por el complemento incluye:
 
-- **manifest.webmanifest**: Metadatos sobre la aplicación y una indicación de que se puede instalar.
-- **sw.js**: Un `service worker`requerido que admite la ejecución como una aplicación (y sin conexión).
-- **registerSW.js**: Un nuevo script que Vite inyecta en el `index.html` que registra al `service worker`.
-- **workbox-*.js**: Código específico del `workbox` para admitir la PWA.
+- `manifest.webmanifest`: Metadatos sobre la aplicación y una indicación de que se puede instalar.
+- `sw.js`: Un _**service worker**_ requerido que admite la ejecución como una aplicación (y sin conexión).
+- `registerSW.js`: Un nuevo script que Vite inyecta en el _**index.html**_ que registra al _**service worker**_.
+- `workbox-*.js`: Código específico del _*workbox*_ para admitir la PWA.
 
-Con esto generado, debería ver el "icono de instalación" en los navegadores compatibles:
+Con esto generado, debería ver el "icono de instalación" en los navegadores compatibles, sin embargo, ello requiere un preajuste mínimo.
 
+![plugin-usage](./img/plugin-usage-00.jpg)
 
+:::tip Consejo
+Para usar un [Preajuste Mínimo](https://vite-pwa-org.netlify.app/assets-generator/#example-using-minimal-preset) empiece generando los `assets`.
+:::
 
-## https://vite-pwa-org.netlify.app/assets-generator/
+## Generador de Assets
 
-## Ejemplo usando un preajuste mínimo
+El [Generador de Assets de PWA](https://vite-pwa-org.netlify.app/assets-generator/) es muy fácil de usar. Usted puede generar íconos utilizando el ajuste preestablecido `minimal` incluido en el paquete [`@vite-pwa/assets-generator`](https://github.com/vite-pwa/assets-generator) a través de una imagen de origen, consulte la documentación de la [CLI](https://vite-pwa-org.netlify.app/assets-generator/cli.html) y la [API](https://vite-pwa-org.netlify.app/assets-generator/api.html) para obtener más detalles.
 
-Puede generar íconos utilizando el ajuste preestablecido `minimal` incluido en el paquete [`@vite-pwa/assets-generator`](https://github.com/vite-pwa/assets-generator) a través de una imagen de origen, consulte la documentación de la [CLI](https://vite-pwa-org.netlify.app/assets-generator/cli.html) y la [API](https://vite-pwa-org.netlify.app/assets-generator/api.html) para obtener más detalles.
-
+Para instalar `@vite-pwa/assets-generator`, simplemente agréguelo a su proyecto como una dependencia de desarrollo
 ```sh
-npm install -D @vite-pwa/assets-generator
+npm i -D @vite-pwa/assets-generator
 ```
+
+Para este ejemplo utilizaré el `logo.svg` de Vue, que viene ya por defecto en la carpeta `./src/assets/`. Siéntase libre de usar el logo de su preferencia. Luego actualice su archivo `package.json`.
 
 ```json
 {
   "scripts": {
-    "generate-pwa-assets": "pwa-assets-generator --preset minimal public/logo.png"
+    ...
+    "generate-pwa-assets": "pwa-assets-generator --preset minimal public/logo.svg"
   }
 }
 ```
+
+Tenga en cuenta que deberá colocar el logo en la carpeta `public`. Entonces, ejecute la generación de los activos.
 
 ```sh
 npm run generate-pwa-assets
 ```
 
+Con realizar estos pasos ya sus `assets` fueron generados correctamente en la misma carpeta de origen. Avancemos con la configuración.
 
-```sh
-> vue-todo-pwa@0.0.0 generate-pwa-assets
-> pwa-assets-generator --preset minimal public/logo.png
+## Entrada de Íconos
 
-Zero Config PWA Assets Generator v0.0.4                                          5:16:13 PM
-◐ Preparing to generate PWA assets...                                            5:16:13 PM
-✔ PWA assets ready to be generated                                               5:16:13 PM
-◐ Generating PWA assets from public/logo.png image                               5:16:13 PM
-✔ Generated PNG file: ~/vue-todo-pwa/public/pwa-64x64.png                        5:16:13 PM
-✔ Generated PNG file: ~/vue-todo-pwa/public/pwa-192x192.png                      5:16:13 PM
-✔ Generated ICO file: ~/vue-todo-pwa/public/favicon.ico                          5:16:13 PM
-✔ Generated PNG file: ~/vue-todo-pwa/public/apple-touch-icon-180x180.png         5:16:13 PM
-✔ Generated PNG file: ~/vue-todo-pwa/public/maskable-icon-512x512.png            5:16:13 PM
-✔ Generated PNG file: ~/vue-todo-pwa/public/pwa-512x512.png                      5:16:13 PM
-✔ PWA assets generated  
-```
-
-:::info
-Todos los assets de PWA se generarán en la misma carpeta de origen.
-:::
-
-
-Actualice su entrada de iconos del manifiesto de la PWA con:
+Actualice su entrada de íconos del manifiesto de la PWA con:
 
 ```ts
 ...
-VitePWA({      
-  manifest: { 
+VitePWA({
+  manifest: {
     icons: [{
       src: 'pwa-64x64.png',
       sizes: '64x64',
@@ -131,15 +121,13 @@ VitePWA({
 ...
 ```
 
-y use las siguientes entradas de encabezado HTML en su punto de entrada:
+Al compilar y previsualizar nuevamente verá el "icono de instalación" en los navegadores compatibles.
 
-```html
-<head>
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png">
-</head>
-```
+![plugin-usage](./img/plugin-usage-01.jpg)
+
+
+
+
 
 https://stackoverflow.com/questions/58985103/progressive-web-app-not-showing-install-button-in-browser-bar
 The properties that you can customize in the manifest are all defined here.
