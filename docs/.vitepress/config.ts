@@ -24,7 +24,8 @@ export default defineConfig({
         items: [
           { text: 'Introducción', link: '/pwa-for-vite/intro' },
           { text: 'Crear Sitio Web', link: '/pwa-for-vite/create-website' },
-          { text: 'Uso del Complemento', link: '/pwa-for-vite/plugin-usage' }                    
+          { text: 'Uso del Complemento', link: '/pwa-for-vite/plugin-usage' },
+          { text: 'Requisitos Mínimos', link: '/pwa-for-vite/minimal-requirements' }
         ]
       }
     ],
@@ -34,3 +35,5 @@ export default defineConfig({
     ]
   }
 })
+
+ 
