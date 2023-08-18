@@ -8,7 +8,9 @@ Para instalarlo, solo necesita agregarlo a sus dependencias de tiempo de desarro
 npm i -D vite-plugin-pwa
 ```
 
-Una vez instalado, puede agregarlo a su archivo `vite.config.ts`:
+Una vez instalado, puede agregarlo a su archivo de configuracipon de Vite:
+
+`📃./vite.config.ts`
 
 ```ts{2,8}
 ...
@@ -20,7 +22,7 @@ export default defineConfig({
     vue(),
     VitePWA()
   ],
-  ...
+  // omitted for brevity ...
 })
 ```
 
@@ -72,6 +74,7 @@ npm i -D @vite-pwa/assets-generator
 
 Para este ejemplo utilizaré el `logo.svg` de Vue, que viene ya por defecto en la carpeta `./src/assets/`. Siéntase libre de usar el logo de su preferencia. Luego actualice su archivo `package.json`.
 
+`📃./package.json`
 ```json
 {
   "scripts": {
@@ -81,7 +84,7 @@ Para este ejemplo utilizaré el `logo.svg` de Vue, que viene ya por defecto en l
 }
 ```
 
-Tenga en cuenta que deberá colocar el logo en la carpeta `public`. Entonces, ejecute la generación de los activos.
+Tenga en cuenta que deberá colocar el _logo_ en la carpeta `public`. Entonces, ejecute la generación de los `assets`.
 
 ```sh
 npm run generate-pwa-assets
@@ -94,7 +97,7 @@ Con realizar estos pasos ya sus `assets` fueron generados correctamente en la mi
 Actualice su entrada de íconos del manifiesto de la PWA con:
 
 ```ts
-...
+// omitted for brevity ...
 VitePWA({
   manifest: {
     icons: [{
@@ -117,19 +120,11 @@ VitePWA({
       purpose: 'maskable'
     }]
   }
-})
-...
+}),
+// omitted for brevity ...
 ```
 
 Al compilar y previsualizar nuevamente verá el "icono de instalación" en los navegadores compatibles.
 
 ![plugin-usage](./img/plugin-usage-01.jpg)
 
-
-
-
-
-https://stackoverflow.com/questions/58985103/progressive-web-app-not-showing-install-button-in-browser-bar
-The properties that you can customize in the manifest are all defined here.
-
-If you run the example now, you can look at the manifest for errors or omissions:
