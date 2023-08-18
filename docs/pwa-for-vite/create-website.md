@@ -121,7 +121,7 @@ VITE_APP_API_URL=https://my-json-server.typicode.com/ecanquiz/vue-todo-pwa
 
 ## Creemos una carpeta llamada `types` y agreguemos el archivo `ìndex.ts`.
 
-`📃.src/types/index.ts`
+`📃./src/types/index.ts`
 ```ts
 export type Task = {
   id: number;
@@ -136,7 +136,7 @@ export type Task = {
 
 ## Creemos una carpeta llamada `services` y agreguemos el archivo `ìndex.ts`.
 
-`📃.src/services/index.ts`
+`📃./src/services/index.ts`
 ```ts
 import axios from 'axios'
 
@@ -152,7 +152,7 @@ export const getTasks = async () => {
 
 ## Creemos el archivo `useIndex.ts` dentro de una nueva carpeta denominada `composables`.
 
-`📃.src/composables/useIndex.ts`
+`📃./src/composables/useIndex.ts`
 ```ts
 import { ref, onMounted } from 'vue'
 import * as Services from '@/services/'
@@ -188,7 +188,7 @@ export default () => {
 
 ## Eliminemos los archivos `AboutView.vue` y `HomeView.vue` ubicados en la carpeta `.src/views` y creemos dentro lo siguiente:
 
-`📃.src/views/Index.vue`
+`📃./src/views/Index.vue`
 ```vue
 <script setup lang="ts">
 import useIndex from '../composables/useIndex'
@@ -228,7 +228,7 @@ const { pending, tasks } = useIndex()
 
 ## Remplacemos todo el archivo `App.vue` con el siguiente contenido:
 
-`📃.src/views/Index.vue`
+`📃./src/views/Index.vue`
 ```vue
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
