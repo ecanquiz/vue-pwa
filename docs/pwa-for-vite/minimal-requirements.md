@@ -254,4 +254,26 @@ Puede usar el servidor que desee, pero su servidor debe:
 
 Puede encontrar más información en la sección [Desplegar](https://vite-pwa-org.netlify.app/deployment/).
 
-https://vite-pwa-org.netlify.app/guide/development.html
+## Desarrollo
+
+Puede usar el **_service worker_** en el [ambiente de desarrollo](https://vite-pwa-org.netlify.app/guide/development.html). El PWA no se registrará, solo la lógica del **_service worker_**, verifique los detalles para cada estrategia.
+
+El **_service worker_** en desarrollo solo estará disponible si la opción de complemento `disabled` no es `true` y la opción de `enable` desarrollo es `true`.
+
+Para habilitar el **_service worker_** en el desarrollo, solo necesita agregar las siguientes opciones a la configuración del complemento:
+
+```ts
+import { VitePWA } from 'vite-plugin-pwa'
+export default defineConfig({
+  plugins: [
+    VitePWA({
+      /* other options */
+      /* enable sw on development */
+      devOptions: {
+        enabled: true
+        /* other options */
+      }
+    })
+  ]
+})
+```
