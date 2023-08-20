@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "Vue PWA"
-  text: "Complemento"
-  tagline: Aplicaciones Web Progresivas
+  text: "Aplicaciones Web Progresivas"
+  tagline: "Usando el complemento de Vite"
   image:
     src: /logo.png
     alt: Vue PWA
