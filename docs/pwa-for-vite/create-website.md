@@ -1,6 +1,6 @@
-# Uso del Complemento de Vite para PWA
+# Crear Sitio Web
 
-## Crear Sitio Web
+Antes de hacer nada de esto, debemos tener un sitio web en funcionamiento.
 
 Crearemos una [Single Page Application (SPA) de Vue](https://vuejs.org/guide/extras/ways-of-using-vue.html#single-page-application-spa) en nuestra máquina local. El proyecto creado utilizará una configuración de compilación basada en [Vite](https://vitejs.dev/) y nos permitirá usar [Single-File Components (SFCs) de Vue](https://vuejs.org/guide/scaling-up/sfc.html).
 
