@@ -1,10 +1,10 @@
 # Caché de Recursos Externos
 
-Si usa algún CDN para descargar algunos recursos como fuentes y css, debe incluirlos en el precaché del **_service worker_**, y [así su aplicación funcionará cuando esté fuera de línea](https://vite-pwa-org.netlify.app/workbox/generate-sw.html#cache-external-resources).
+## Red de Distribución de Contenidos
 
-El siguiente ejemplo utilizará css de https://fonts.googleapis.com.
+Si usa algún CDN (Content Delivery Network) para descargar algunos recursos como fuentes y css, debe incluirlos en el precaché del **_service worker_**, y [así su aplicación funcionará cuando esté fuera de línea](https://vite-pwa-org.netlify.app/workbox/generate-sw.html#cache-external-resources).
 
-En el archivo `index.html` debe configurar el enlace `css`, también **DEBE** incluir el atributo `crossorigin="anonymous"` para los recursos externos (consulte [Manejar Solicitudes de Terceros](https://developer.chrome.com/docs/workbox/caching-resources-during-runtime/#cross-origin-considerations)):
+El siguiente ejemplo utilizará css de https://fonts.googleapis.com. En el archivo `index.html` debe configurar el enlace `css`, también **DEBE** incluir el atributo `crossorigin="anonymous"` para los recursos externos (consulte [Manejar Solicitudes de Terceros](https://developer.chrome.com/docs/workbox/caching-resources-during-runtime/#cross-origin-considerations)):
 
 `📃./index.html`
 ```html
@@ -44,8 +44,48 @@ VitePWA({
 })
 ```
 
-## Fuera de Línea 
+## Red Fuera de Línea 
 
 Puede desconectarse cambiando la red a `Offline`. Si actualiza la página, obtendrá algo similar a esto:
 
 ![cache-external-resources](./img/cache-external-resources-01.jpg)
+
+Si bién es cierto, el estilo sigue funcionando, pero la data no se consigue.
+
+No se preocupe, agregué una configuración más a su archivo de configuración de Vite para indicar que necesitamos almacenar cierta data en cache.
+
+`📃./vite.config.ts`
+
+```ts
+VitePWA({
+  // omitted for brevity ...
+  workbox: {
+    // omitted for brevity ...
+    runtimeCaching: [
+      {
+        urlPattern: ({ url }) => {
+          return url.pathname.startsWith("/ecanquiz/vue-todo-pwa");
+        },
+        //urlPattern: /^https:\/.my-json-server\.typicode\.com/,       
+        handler: "NetworkFirst" as const,
+        method: 'GET',
+        options: {
+          cacheName: "api-cache",
+          expiration: {
+            maxEntries: 10,
+            maxAgeSeconds: 60 * 60 * 24 * 7, // <== 7 days
+          },
+          cacheableResponse: {
+            statuses: [0, 200],
+          },
+        },
+      },
+    ]
+  },
+  // omitted for brevity ...
+})
+```
+
+Despues de compilar esta configuración notará que la data también será guardada en caché.
+
+![cache-external-resources](./img/cache-external-resources-02.jpg)
