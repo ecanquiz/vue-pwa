@@ -26,7 +26,8 @@ export default defineConfig({
           { text: 'Crear Sitio Web', link: '/pwa-for-vite/create-website' },
           { text: 'Uso del Complemento', link: '/pwa-for-vite/plugin-usage' },
           { text: 'Requisitos Mínimos', link: '/pwa-for-vite/minimal-requirements' },
-          { text: 'Caché de Recursos Externos', link: '/pwa-for-vite/cache-external-resources' },          
+          { text: 'Caché de Recursos Externos', link: '/pwa-for-vite/cache-external-resources' },
+          { text: 'Notificaciones', link: '/pwa-for-vite/notification' },      
         ]
       }
     ],
