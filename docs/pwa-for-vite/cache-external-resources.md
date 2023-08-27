@@ -1,8 +1,8 @@
 # Caché de Recursos Externos
 
-## Red de Distribución de Contenidos
+## Distribución de Contenidos
 
-Si usa algún CDN (Content Delivery Network) para descargar algunos recursos como fuentes y css, debe incluirlos en el precaché del **_service worker_**, y [así su aplicación funcionará cuando esté fuera de línea](https://vite-pwa-org.netlify.app/workbox/generate-sw.html#cache-external-resources).
+Si usa algún [CDN (Content Delivery Network)](https://en.wikipedia.org/wiki/Content_delivery_network) para descargar algunos recursos como fuentes y css, debe incluirlos en el precaché del **_service worker_**, y [así su aplicación funcionará cuando esté fuera de línea](https://vite-pwa-org.netlify.app/workbox/generate-sw.html#cache-external-resources).
 
 El siguiente ejemplo utilizará css de https://fonts.googleapis.com. En el archivo `index.html` debe configurar el enlace `css`, también **DEBE** incluir el atributo `crossorigin="anonymous"` para los recursos externos (consulte [Manejar Solicitudes de Terceros](https://developer.chrome.com/docs/workbox/caching-resources-during-runtime/#cross-origin-considerations)):
 
@@ -44,13 +44,13 @@ VitePWA({
 })
 ```
 
-## Red Fuera de Línea 
+## Fuera de Línea 
 
 Puede desconectarse cambiando la red a `Offline`. Si actualiza la página, obtendrá algo similar a esto:
 
 ![cache-external-resources](./img/cache-external-resources-01.jpg)
 
-Si bién es cierto, el estilo sigue funcionando, pero la data no se consigue.
+Tenga en cuenta la información que hasta el momento se ha guardado en el `Cache Storage`. Si bién es cierto, el estilo sigue funcionando, pero no hay data.
 
 No se preocupe, agregué una configuración más a su archivo de configuración de Vite para indicar que necesitamos almacenar cierta data en cache.
 
@@ -86,6 +86,6 @@ VitePWA({
 })
 ```
 
-Despues de compilar esta configuración notará que la data también será guardada en caché.
+Después de compilar esta configuración notará que la data también será guardada en caché.
 
 ![cache-external-resources](./img/cache-external-resources-02.jpg)
