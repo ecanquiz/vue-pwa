@@ -6,3 +6,7 @@ La mayoría de los complementos de Aplicaciones Web Progresivas, de los framewor
 
 Antes de hacer nada de esto, debemos tener un sitio web en funcionamiento.
 
+:::tip Práctica
+En la siguiente sección desarrollaremos una SPA con Vue y la convertiremos en PWA con el respectivo complemento para Vite. Si de momento no desea seguir esta práctica, siéntase libre de pasar directamente a la siguiente sección para aprender a [usar este complemento](../pwa-for-vite/plugin-usage.html). 
+:::
+

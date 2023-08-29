@@ -2,6 +2,10 @@
 
 Antes de hacer nada de esto, debemos tener un sitio web en funcionamiento.
 
+:::tip Práctica
+En esta sección desarrollaremos una SPA con Vue y la convertiremos en PWA con el respectivo complemento para Vite. Si de momento no desea seguir esta práctica, siéntase libre de pasar directamente a la siguiente sección para aprender a [usar este complemento](../pwa-for-vite/plugin-usage.html). 
+:::
+
 Crearemos una [Single Page Application (SPA) de Vue](https://vuejs.org/guide/extras/ways-of-using-vue.html#single-page-application-spa) en nuestra máquina local. El proyecto creado utilizará una configuración de compilación basada en [Vite](https://vitejs.dev/) y nos permitirá usar [Single-File Components (SFCs) de Vue](https://vuejs.org/guide/scaling-up/sfc.html).
 
 Asegúrese de tener instalada una versión actualizada de [Node.js](https://nodejs.org/en) y de que su directorio de trabajo actual sea aquel en el que pretende crear el proyecto.

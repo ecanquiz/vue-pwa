@@ -16,6 +16,16 @@ export default defineConfig({
 
     sidebar: [
       {
+        text: 'Progressive Web Apps',
+        path: '/pwa/',
+        idebarDepth: 1,    // optional, defaults to 1
+        collapsible: true,
+        collapsed: false, 
+        items: [
+          { text: 'Visión General', link: '/pwa/intro' },     
+        ]
+      },
+      {
         text: 'PWA para Vite',
         path: '/pwa-for-vite/',
         idebarDepth: 1,    // optional, defaults to 1
@@ -26,15 +36,27 @@ export default defineConfig({
           { text: 'Crear Sitio Web', link: '/pwa-for-vite/create-website' },
           { text: 'Uso del Complemento', link: '/pwa-for-vite/plugin-usage' },
           { text: 'Requisitos Mínimos', link: '/pwa-for-vite/minimal-requirements' },
-          { text: 'Caché de Recursos Externos', link: '/pwa-for-vite/cache-external-resources' },
-          { text: 'Notificaciones', link: '/pwa-for-vite/notification' },      
+          { text: 'Caché de Recursos Externos', link: '/pwa-for-vite/cache-external-resources' },          
         ]
-      }
+      },
+      {
+        text: 'Notificaciones',
+        path: '/notifications/',
+        idebarDepth: 1,    // optional, defaults to 1
+        collapsible: true,
+        collapsed: false, 
+        items: [
+          { text: 'Ejemplo', link: '/notifications/example' },     
+        ]
+      },
     ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ecanquiz/vue-pwa' }
-    ]
+    ],
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2023-present Ernesto Canquiz'
+    }    
   }
 })
 

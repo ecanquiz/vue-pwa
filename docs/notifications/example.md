@@ -1,4 +1,4 @@
-# Notificaciones
+# Ejemplo de Notificaciones
 
 En este apartado partiremos de un ejemplo de [Notificación](https://developer.mozilla.org/en-US/docs/Web/API/Notification) construido en [Vanilla JavaScript](https://mdn.github.io/dom-examples/to-do-notifications/) adaptado a nuestro ejemplo en Vue.
 
@@ -70,11 +70,11 @@ const notifyMe = () => {
 ```
 TODO
 
-![notification](./img/notification-00.jpg)
+![example](./img/example-00.jpg)
 
 TODO
 
-![notification](./img/notification-01.jpg)
+![example](./img/example-01.jpg)
 
 TODO
 
