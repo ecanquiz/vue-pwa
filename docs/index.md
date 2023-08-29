@@ -18,27 +18,18 @@ hero:
       link: https://ecanquiz.github.io/
 
 features:
-  - title: Configuración cero
-    details: Configuraciones predeterminadas integradas sensibles para casos de uso común
-  - title: Extensible
-    details: Exponga la capacidad completa de personalizar el comportamiento del complemento
-  - title: Soporte fuera de línea
-    details: Generar Service Worker con soporte sin conexión (a través de Workbox)
-  - title: Completamente tree shakable
-    details: Manifiesto de aplicación web de inyección automática
-  - title: Solicitar nuevo contenido
-    details: Soporte integrado para Vue 3
-  - title: Obsoleto mientras se revalida
-    details: Recarga automática cuando hay nuevo contenido disponible
-  - title: Manejo de assets estáticos
-    details: Configurar assets estáticos para soporte fuera de línea
-  - title: Apoyo al Desarrollo
-    details: Depure la lógica de su service worked personalizado a medida que desarrolla su aplicación
-  - title: Generador de assets de PWA
-    details: Genere todos los assets de PWA desde un solo comando y una sola imagen de origen
+  - title: Aplicaciones Web Progresivas
+    details: Las PWA son aplicaciones web creadas y mejoradas con API modernas para ofrecer capacidades, confiabilidad e instalación mejoradas y, al mismo tiempo, llegar a cualquier persona, en cualquier lugar y en cualquier dispositivo, todo con una única base de código.
+  - title: Cimientos
+    details: Todas las aplicaciones web progresivas son, en esencia, sitios web modernos, por lo que es importante que su sitio web tenga una base sólida en diseño responsivo, dispositivos móviles y todo lo primero, diseño intrínseco y rendimiento web.
+  - title: Complemento Vite PWA
+    details: Complemento independiente del framework PWA de configuración cero para Vite. El complemento de Vite funciona en diferentes frameworks SPA. Integraciones de PWA para Vite y el ecosistema.
+    
+footer: MIT Licensed | Copyleft © 2023-present Ernesto Canquiz
 ---
 
-
+ 
+ 
 
 
 
