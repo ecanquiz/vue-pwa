@@ -111,16 +111,16 @@ La configuración de nuestros propios repositorios _**GitHub**_ es realmente fá
 
 Ya seguí adelante y creé esto para nosotros, para que podamos usarlo con el repositorio de este tutorial. La URL de nuestra API REST es: 
 
-[`https://my-json-server.typicode.com/ecanquiz/vue-todo-pwa`](https://my-json-server.typicode.com/ecanquiz/vue-todo-pwa).
+[`https://my-json-server.typicode.com/ecanquiz/vue-pwa`](https://my-json-server.typicode.com/ecanquiz/vue-pwa).
 
-Cuando abra el servidor, notará que en recursos tenemos a [`/tasks`](https://my-json-server.typicode.com/ecanquiz/vue-todo-pwa/tasks) para consumir.
+Cuando abra el servidor, notará que en recursos tenemos a [`/tasks`](https://my-json-server.typicode.com/ecanquiz/vue-pwa/tasks) para consumir.
 
 
 ## En la carpeta raiz, creemos el archivo `.env`.
 
 `📃./.env`
 ```.env
-VITE_APP_API_URL=https://my-json-server.typicode.com/ecanquiz/vue-todo-pwa
+VITE_APP_API_URL=https://my-json-server.typicode.com/ecanquiz/vue-pwa
 ```
 
 ## Creemos una carpeta llamada `types` y agreguemos el archivo `ìndex.ts`.
@@ -277,6 +277,6 @@ const router = createRouter({
 export default router
 ```
 
-## Listo
+## Sitio Web Creado
 
 ![create-website](./img/create-website-00.jpg)
