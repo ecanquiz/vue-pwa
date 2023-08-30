@@ -11,18 +11,15 @@ export default defineConfig({
     siteTitle: 'Vue PWA',
     nav: [
       { text: 'Inicio', link: '/' },
-      { text: 'Comenzar', link: '/markdown-examples' }
+      { text: 'Comenzar', link: '/pwa' }
     ],
 
     sidebar: [
-      {
-        text: 'Progressive Web Apps',
-        path: '/pwa/',
-        idebarDepth: 1,    // optional, defaults to 1
-        collapsible: true,
-        collapsed: false, 
+      {      
+        path: '/',      // optional, link of the title, which should be an absolute path and must exist        
+        sidebarDepth: 1,    // optional, defaults to 1
         items: [
-          { text: 'Visión General', link: '/pwa/intro' },     
+          { text: 'Progressive Web Apps', link: '/pwa' },
         ]
       },
       {
@@ -49,6 +46,13 @@ export default defineConfig({
           { text: 'Ejemplo', link: '/notifications/example' },     
         ]
       },
+      {      
+        path: '/',      // optional, link of the title, which should be an absolute path and must exist        
+        sidebarDepth: 1,    // optional, defaults to 1
+        items: [
+          { text: 'Recursos', link: '/resources' },
+        ]
+      }
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ecanquiz/vue-pwa' }
