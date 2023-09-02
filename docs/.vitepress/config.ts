@@ -43,7 +43,7 @@ export default defineConfig({
         collapsible: true,
         collapsed: false, 
         items: [
-          { text: 'Ejemplo', link: '/notifications/example' },     
+          { text: 'Ejemplo de', link: '/notifications/example-of' },     
         ]
       },
       {      
