@@ -280,3 +280,7 @@ export default router
 ## Sitio Web Creado
 
 ![create-website](./img/create-website-00.jpg)
+
+---
+
+Es momento de convertir este Sitio Web en una PWA...
