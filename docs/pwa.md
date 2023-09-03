@@ -103,4 +103,4 @@ Las PWA no solo están vinculadas a la pantalla. [Este capítulo](https://web.de
 
 ## Conclusión
 
-Entonces, ¿estás listo para aprender PWA?
+Entonces, ¿estás listo para aprender PWA con Vite Plugin?

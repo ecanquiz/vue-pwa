@@ -1,6 +1,6 @@
 # Ejemplo de Notificaciones
 
->En este apartado partiremos de un ejemplo de [Notificación](https://developer.mozilla.org/en-US/docs/Web/API/Notification) construido en [Vanilla JavaScript](https://mdn.github.io/dom-examples/to-do-notifications/) adaptado a nuestro ejemplo en Vue.
+>En este apartado agregaremos, a nuestra [PWA desarrollada en la sección anterior](../pwa-for-vite/create-website.html) con Vue, un ejemplo de [Notificación](https://developer.mozilla.org/en-US/docs/Web/API/Notification) migrado desde [Vanilla JavaScript](https://mdn.github.io/dom-examples/to-do-notifications/).
 
 ## `usePermission`
 
@@ -13,7 +13,7 @@ npm i @vueuse/core
 
 ## `App.vue`
 
-Desde el ejemplo de [Notificación](https://developer.mozilla.org/en-US/docs/Web/API/Notification) construido en [Vanilla JavaScript](https://mdn.github.io/dom-examples/to-do-notifications/) adaptado a nuestro ejemplo en Vue, copie y pegue dentro del archivo `.src/App.vue` el siguiente código.
+Copie y pegue dentro del archivo `.src/App.vue` el siguiente código.
 
 `📃./src/App.vue`
 ```vue
@@ -103,7 +103,7 @@ De vuelta, cuando refresque su aplicación, el navegador le preguntará si desea
 
 ![example](./img/example-00.jpg)
 
-Al aceptar, el navegador mostrará notificaciones.
+Si lo acepta, el navegador mostrará notificaciones.
 
 ![example](./img/example-01.jpg)
 
