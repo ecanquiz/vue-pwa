@@ -1,4 +1,4 @@
-# Ejemplo de Notificaciones
+# Notificaciones
 
 >En este apartado agregaremos, a nuestra [PWA desarrollada en la sección anterior](../pwa-for-vite/create-website.html) con Vue, un ejemplo de [Notificación](https://developer.mozilla.org/en-US/docs/Web/API/Notification) migrado desde [Vanilla JavaScript](https://mdn.github.io/dom-examples/to-do-notifications/).
 
@@ -107,6 +107,3 @@ Si lo acepta, el navegador mostrará notificaciones.
 
 ![example](./img/example-01.jpg)
 
-## Ejemplo en vivo
-
-[Entre aquí](https://ecanquiz.github.io/vue-todo-pwa/) si desea probar este ejemplo y ver la PWA funcionando en vivo.

@@ -11,7 +11,8 @@ export default defineConfig({
     siteTitle: 'Vue PWA',
     nav: [
       { text: 'Inicio', link: '/' },
-      { text: 'Comenzar', link: '/pwa' }
+      { text: 'Tutorial', link: '/pwa' },
+      { text: 'ecanquiz', link: 'https://ecanquiz.github.io/' }
     ],
 
     sidebar: [
@@ -27,7 +28,7 @@ export default defineConfig({
         path: '/pwa-for-vite/',
         idebarDepth: 1,    // optional, defaults to 1
         collapsible: true,
-        collapsed: false, 
+        collapsed: true, 
         items: [
           { text: 'Introducción', link: '/pwa-for-vite/intro' },
           { text: 'Crear Sitio Web', link: '/pwa-for-vite/create-website' },
@@ -35,21 +36,13 @@ export default defineConfig({
           { text: 'Requisitos Mínimos', link: '/pwa-for-vite/minimal-requirements' },
           { text: 'Caché de Recursos Externos', link: '/pwa-for-vite/cache-external-resources' },          
         ]
-      },
-      {
-        text: 'Notificaciones',
-        path: '/notifications/',
-        idebarDepth: 1,    // optional, defaults to 1
-        collapsible: true,
-        collapsed: false, 
-        items: [
-          { text: 'Ejemplo de', link: '/notifications/example-of' },     
-        ]
-      },
+      },      
       {      
         path: '/',      // optional, link of the title, which should be an absolute path and must exist        
         sidebarDepth: 1,    // optional, defaults to 1
         items: [
+          { text: 'Notificaciones', link: '/notifications' },
+          { text: 'Ejemplo en vivo', link: '/live-example' },             
           { text: 'Recursos', link: '/resources' },
         ]
       }

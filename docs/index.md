@@ -11,7 +11,7 @@ hero:
     alt: Vue PWA
   actions:
     - theme: brand
-      text: Comenzar
+      text: Tutorial
       link: /pwa
     - theme: alt
       text: ecanquiz
