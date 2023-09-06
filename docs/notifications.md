@@ -1,6 +1,6 @@
 # Notificaciones
 
->En este apartado agregaremos, a nuestra [PWA desarrollada en la sección anterior](../pwa-for-vite/create-website.html) con Vue, un ejemplo de [Notificación](https://developer.mozilla.org/en-US/docs/Web/API/Notification) migrado desde [Vanilla JavaScript](https://mdn.github.io/dom-examples/to-do-notifications/).
+>En este apartado agregaremos, a nuestra [PWA desarrollada en la sección anterior](./pwa-for-vite/create-website.html) con Vue, un ejemplo de [Notificación](https://developer.mozilla.org/en-US/docs/Web/API/Notification) migrado desde [Vanilla JavaScript](https://mdn.github.io/dom-examples/to-do-notifications/).
 
 ## `usePermission`
 
