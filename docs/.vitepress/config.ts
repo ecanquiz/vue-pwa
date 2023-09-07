@@ -42,7 +42,8 @@ export default defineConfig({
         sidebarDepth: 1,    // optional, defaults to 1
         items: [
           { text: 'Notificaciones', link: '/notifications' },
-          { text: 'Ejemplo en vivo', link: '/live-example' },             
+          { text: 'Ejemplo en vivo', link: '/live-example' },
+          { text: 'Temas pendiente', link: '/pending-issues' },            
           { text: 'Recursos', link: '/resources' },
         ]
       }
