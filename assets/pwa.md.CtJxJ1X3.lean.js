@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as r,a3 as n}from"./chunks/framework.DUig1ioE.js";const b=JSON.parse('{"title":"PWA","description":"","frontmatter":{},"headers":[],"relativePath":"pwa.md","filePath":"pwa.md"}'),i={name:"pwa.md"},s=n("",52),o=[s];function t(l,d,c,p,u,m){return r(),a("div",null,o)}const f=e(i,[["render",t]]);export{b as __pageData,f as default};
