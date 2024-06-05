@@ -1,0 +1,1 @@
+import{_ as e,c as r,o as a,a3 as s}from"./chunks/framework.DUig1ioE.js";const f=JSON.parse('{"title":"Recursos","description":"","frontmatter":{},"headers":[],"relativePath":"resources.md","filePath":"resources.md"}'),t={name:"resources.md"},o=s("",5),l=[o];function i(c,n,u,d,h,_){return a(),r("div",null,l)}const m=e(t,[["render",i]]);export{f as __pageData,m as default};
